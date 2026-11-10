@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Pink & Gold</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background: #fff8f6;
+    color: #59444a;
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(130deg, #754353, #b66f83, #d9ae83);
+    color: white;
+    text-align: center;
+    padding: 85px 20px 75px;
+}
+
+header .small {
+    letter-spacing: 6px;
+    color: #f8dfc1;
+    font-size: 12px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 15px 0;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #fff2ec;
+    font-size: 15px;
+}
+
+nav {
+    background: #754353;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px #6d394522;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #f4d59d;
+}
+
+.intro {
+    text-align: center;
+    padding: 65px 20px 25px;
+}
+
+.intro span {
+    color: #c49a60;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.intro h2 {
+    color: #a35d73;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.intro p {
+    color: #947b80;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.profile-section {
+    background: #fffdfb;
+    border: 1px solid #efd8d5;
+    border-radius: 25px;
+    margin: 35px 0;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(153, 91, 105, .09);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading span {
+    color: #c49a60;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    color: #98566d;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0e3df;
+}
+
+.profile img {
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 115px 115px 25px 25px;
+    border: 7px solid #efd5d4;
+    box-shadow: 0 10px 25px #b77b8125;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 540px;
+}
+
+.profile-info h3 {
+    color: #98566d;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.profile-info strong {
+    color: #b17b45;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.detail-box {
+    background: #fff5f2;
+    border-radius: 17px;
+    padding: 23px;
+    border-left: 5px solid #c69b60;
+}
+
+.detail-box h4 {
+    color: #98566d;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.detail-box p,
+.detail-box li {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.detail-box ul {
+    padding-left: 20px;
+}
+
+.goal {
+    background: linear-gradient(120deg, #9d5c72, #c28b82, #d7b17c);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.goal h4 {
+    color: #ffe9c6;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.goal p {
+    font-size: 17px;
+}
+
+footer {
+    background: #754353;
+    color: #f9e9df;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 60px;
+    font-size: 13px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 3px;
+    background: #c69b60;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+@media(max-width: 700px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    .profile-section {
+        padding: 25px 18px;
+    }
+
+    .profile {
+        gap: 25px;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .profile img {
+        width: 190px;
+        height: 245px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="small">PORTFOLIO</div>
+    <h1>แฟ้มสะสมผลงาน</h1>
+    <p>เส้นทางแห่งความฝัน ความตั้งใจ และความภาคภูมิใจ</p>
+    <div class="gold-line"></div>
+    <p>PERSONAL PROFILE & ACHIEVEMENTS</p>
+</header>
+
+<nav>
+    <a href="#home">หน้าแรก</a>
+    <a href="#person1">จุติพร</a>
+    <a href="#person2">วรวรรณ</a>
+    <a href="#education">การศึกษา</a>
+    <a href="#activities">กิจกรรม</a>
+    <a href="#awards">เกียรติบัตร</a>
+</nav>
+
+<section class="intro" id="home">
+    <span>WELCOME TO OUR PORTFOLIO</span>
+    <h2>ABOUT US</h2>
+    <p>รวบรวมประวัติส่วนตัว ประวัติการศึกษา กิจกรรม และผลงาน</p>
+    <p>เพื่อแสดงถึงความมุ่งมั่นและความพร้อมในการก้าวสู่อนาคต</p>
+</section>
+
+<div class="container">
+
+<!-- PERSON 1 -->
+<section class="profile-section" id="person1">
+    <div class="section-heading">
+        <span>PERSONAL PROFILE 01</span>
+        <h2>ประวัติส่วนตัวคนที่ 1</h2>
+    </div>
+
+    <div class="profile">
+        <img src="./jutiporn.jpg" alt="รูปโปรไฟล์จุติพร">
+        <div class="profile-info">
+            <h3>นางสาวจุติพร อานนท์</h3>
+            <p><strong>ระดับชั้น:</strong> มัธยมศึกษาปีที่ 6</p>
+            <p><strong>เกรดเฉลี่ย 4 ภาคเรียน:</strong> 3.55</p>
+            <p><strong>มหาวิทยาลัยที่มุ่งศึกษาต่อ:</strong> มหาวิทยาลัยราชภัฏนครศรีธรรมราช</p>
+            <p><strong>คณะ:</strong> รัฐศาสตร์</p>
+            <p><strong>สาขา:</strong> รัฐประศาสนศาสตร์</p>
+        </div>
+    </div>
+
+    <div class="details" id="education">
+        <div class="detail-box">
+            <h4>ประวัติการศึกษา</h4>
+            <p>กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+            <p>มุ่งศึกษาต่อคณะรัฐศาสตร์ สาขารัฐประศาสนศาสตร์</p>
+            <p>มหาวิทยาลัยราชภัฏนครศรีธรรมราช</p>
+        </div>
+
+        <div class="detail-box">
+            <h4>กิจกรรมที่เข้าร่วม</h4>
+            <ul>
+                <li>ฝึกประสบการณ์วิชาชีพ ณ โรงเรียนบ้านเกาะขวัญ ระดับชั้นมัธยมศึกษา เรียนรู้การจัดการเรียนการสอน การดูแลนักเรียน และการทำงานในวิชาชีพครู</li>
+                <li>เข้าร่วมกิจกรรมตอบปัญหาวันวิทยาศาสตร์ เพื่อพัฒนาความรู้ การคิดวิเคราะห์ และการแก้ปัญหา</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="detail-box" id="awards" style="margin-top:20px;">
+        <h4>เกียรติบัตรและรางวัลที่ได้รับ</h4>
+        <ul>
+            <li>ผ่านการอบรมเชิงวิชาการ มหาวิทยาลัยราชภัฏสวนสุนันทา ศูนย์การศึกษาจังหวัดอุดรธานี ประจำปีการศึกษา 2568</li>
+            <li>ได้รับรางวัลรองชนะเลิศอันดับที่ 2 การแข่งขันตอบปัญหาวันสำคัญทางพระพุทธศาสนา ระดับชั้นมัธยมศึกษาตอนปลาย</li>
+        </ul>
+    </div>
+
+    <div class="goal">
+        <h4>MY DREAM CAREER</h4>
+        <p>ปลัดอำเภอ</p>
+    </div>
+</section>
+
+<!-- PERSON 2 -->
+<section class="profile-section" id="person2">
+    <div class="section-heading">
+        <span>PERSONAL PROFILE 02</span>
+        <h2>ประวัติส่วนตัวคนที่ 2</h2>
+    </div>
+
+    <div class="profile">
+        <img src="./worawan.jpg" alt="รูปโปรไฟล์วรวรรณ">
+        <div class="profile-info">
+            <h3>นางสาววรวรรณ เจริญรูป</h3>
+            <p><strong>ระดับชั้น:</strong> มัธยมศึกษาปีที่ 6</p>
+            <p><strong>เกรดเฉลี่ย 4 ภาคเรียน:</strong> 3.81</p>
+            <p><strong>มหาวิทยาลัยที่มุ่งศึกษาต่อ:</strong> มหาวิทยาลัยรามคำแหง</p>
+            <p><strong>คณะ:</strong> ครุศาสตร์</p>
+            <p><strong>สาขา:</strong> การประถมศึกษา</p>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="detail-box">
+            <h4>ประวัติการศึกษา</h4>
+            <p>กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6</p>
+            <p>มุ่งศึกษาต่อคณะครุศาสตร์ สาขาการประถมศึกษา</p>
+            <p>มหาวิทยาลัยรามคำแหง</p>
+        </div>
+
+        <div class="detail-box">
+            <h4>กิจกรรมที่เข้าร่วม</h4>
+            <ul>
+                <li>ฝึกประสบการณ์วิชาชีพ ณ โรงเรียนปรายรา ระดับชั้นประถมศึกษา เพื่อเรียนรู้การจัดการเรียนการสอน การดูแลนักเรียน และการทำงานในวิชาชีพครู</li>
+                <li>เข้าร่วมกิจกรรมตอบปัญหาวันวิทยาศาสตร์ เพื่อพัฒนาความรู้ การคิดวิเคราะห์ และการแก้ปัญหา</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="detail-box" style="margin-top:20px;">
+        <h4>เกียรติบัตรและรางวัลที่ได้รับ</h4>
+        <ul>
+            <li>ได้รับเกียรติบัตรยกย่องว่าเป็นนักเรียนที่มีผลการเรียนระดับดีเยี่ยม เกรดเฉลี่ย 3.81 ประจำปีการศึกษา 2568</li>
+            <li>ได้รับรางวัลรองชนะเลิศอันดับที่ 2 การแข่งขันตอบปัญหาวันสำคัญทางพระพุทธศาสนา ระดับชั้นมัธยมศึกษาตอนปลาย</li>
+        </ul>
+    </div>
+
+    <div class="goal">
+        <h4>MY DREAM CAREER</h4>
+        <p>รองผู้อำนวยการ</p>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>PORTFOLIO | PINK & GOLD EDITION</p>
+    <p>ความพยายามในวันนี้ คือความสำเร็จในวันข้างหน้า</p>
+</footer>
+
+</body>
+</html>
